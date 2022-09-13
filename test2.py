@@ -1,5 +1,5 @@
 from gtts import gTTS
-from playsound import playsound
+#from playsound import playsound
 import speech_recognition as sr
 import os
 import time
@@ -75,42 +75,42 @@ playsa = pygame.mixer.music
 
 def Welcome():
     # hands_up()
-    obj = gTTS(text='أهلا وسهلا بك',lang='ar',slow=False)
+    obj = gTTS(text='أهلا وسهلا بك',lang='ar')
     obj.save('Welcome.mp3')
     playsa.load('Welcome.mp3')
     playsa.play()
     while playsa.get_busy() == True:
         continue
-    playsa.unload()
-    obj = gTTS(text='روبوت البسمة هنا لأجلك',lang='ar',slow=False)
+    #playsa.unload()
+    obj = gTTS(text='روبوت البسمة هنا لأجلك',lang='ar')
     obj.save('Welcome1.mp3')
     playsa.load('Welcome1.mp3')
     playsa.play()
     while playsa.get_busy() == True:
         continue
-    playsa.unload()
+    #playsa.unload()
 
-    obj = gTTS(text='كيف يمكنني مساعدتك',lang='ar',slow=False)
+    obj = gTTS(text='كيف يمكنني مساعدتك',lang='ar')
     obj.save('Welcome2.mp3')
     playsa.load('Welcome2.mp3')
     playsa.play()
     while playsa.get_busy() == True:
         continue
-    playsa.unload()
+    #playsa.unload()
     # hands_down()
     speech()
 
 def no_got_it():
 
-    z = open(r'C:/Users/shake/Desktop/Al Bassmah projects/2.txt','r',encoding='utf-8')
+    z = open('2.txt','r',encoding='utf-8')
     no_got_it = random.choice(z.readlines())
-    obj = gTTS(text=no_got_it,lang='ar',slow=False)
+    obj = gTTS(text=no_got_it,lang='ar')
     obj.save('no_got_it.mp3')
     playsa.load('no_got_it.mp3')
     playsa.play()
     while playsa.get_busy() == True:
         continue
-    playsa.unload()
+    #playsa.unload()
     speech()
 
 def speech():
@@ -121,7 +121,7 @@ def speech():
     try:
         word= r.recognize_google(audio,language='ar-AR')
         print(word)
-        a = open(r'C:/Users/shake/Desktop/Al Bassmah projects/1.txt', "r",encoding='utf-8').readlines()
+        a = open('1.txt', "r",encoding='utf-8').readlines()
         line_number = 0
         for file in a :
             line_number+=1
@@ -129,7 +129,7 @@ def speech():
                 print(file.strip())
                 next_line = a[line_number]
                 print(next_line)
-                obj= gTTS(text=next_line,lang='ar',slow=False)
+                obj= gTTS(text=next_line,lang='ar')
                 obj.save('question.mp3')
                 playsa.load('question.mp3')
                 playsa.play()
@@ -178,4 +178,5 @@ def speech():
         no_got_it()
 
 Welcome()
+
 
