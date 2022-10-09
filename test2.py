@@ -10,7 +10,7 @@ from time import sleep
 import time
 pygame.mixer.init()
 playsa = pygame.mixer.music
-robot = Robot(left=(24, 23), right=(17, 27))
+robot = Robot(left=(13, 6), right=(19, 26))
 def happysmile():
     
     print("                            ████████████████████                           ")
@@ -237,44 +237,44 @@ def speech():
                 
             elif (word == 'للامام' or word == 'للأمام' or word == 'الامام' or word == 'امام' or word == 'تقدم' or word == 'قدم'):
                 robot.forward(0.5)
-                sleep(20)
+                sleep(12)
                 robot.stop()
                 print("Forward done")
                 speech()
 
             elif (word == 'للخلف' or word == 'للوراء' or word == 'ارجع' or word == 'تراجع' or word == 'خلف'):
                 robot.backward(0.5)
-                sleep(20)
+                sleep(12)
                 robot.stop()
                 print("Backward done")
                 speech()
 
             elif (word == 'اليمين' or word == 'انعطف يمينً' or word == 'انعطي لليمين' or word == 'يمين' or word == 'مين' or word == 'يمن'):
                 robot.right(0.2)
-                sleep(1)
+                sleep(5)
                 robot.stop()
                 print('Right done')
                 speech()
 
             elif (word == 'لليسار' or word == 'الى اليسار' or word == 'يسار' or word == 'انعطف لليسار'or word == 'ياسر'):
                 robot.left(0.2)
-                sleep(1)
+                sleep(5)
                 robot.stop()
                 print('Left done')
                 speech()
 
             elif (word == "ارقص" or word == "ارقص لي" or word == "ارقصلي" or word == "رقص"):
                 robot.forward(0.5)
-                sleep(3)
+                sleep(4)
                 robot.stop()
                 robot.backward(0.5)
-                sleep(1)
+                sleep(2)
                 robot.stop()
                 robot.forward(0.5)
-                sleep(1)
+                sleep(2)
                 robot.stop()
                 robot.backward(0.5)
-                sleep(0.5)
+                sleep(1)
                 robot.stop()
                 robot.right(0.2)
                 sleep(3)
@@ -292,10 +292,10 @@ def speech():
                 sleep(6)
                 robot.stop()
                 robot.backward(0.5)
-                sleep(0.5)
+                sleep(2)
                 robot.stop()
                 robot.left(0.2)
-                sleep(0.7)
+                sleep(2)
                 robot.stop()
             
         else:
