@@ -252,14 +252,14 @@ def speech():
 
             elif (word == 'اليمين' or word == 'انعطف يمينً' or word == 'انعطي لليمين' or word == 'يمين' or word == 'مين' or word == 'يمن'):
                 robot.right(0.2)
-                sleep(5)
+                sleep(4)
                 robot.stop()
                 print('Right done')
                 speech()
 
             elif (word == 'لليسار' or word == 'الى اليسار' or word == 'يسار' or word == 'انعطف لليسار'or word == 'ياسر'):
                 robot.left(0.2)
-                sleep(5)
+                sleep(4)
                 robot.stop()
                 print('Left done')
                 speech()
@@ -281,7 +281,7 @@ def speech():
                 sleep(3)
                 robot.stop()
                 robot.left(0.2)
-                sleep(5)
+                sleep(4)
                 robot.stop()
                 robot.backward(0.5)
                 sleep(4)
